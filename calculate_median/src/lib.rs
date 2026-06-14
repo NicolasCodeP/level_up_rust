@@ -1,4 +1,4 @@
-fn median(mut list: Vec<f32>) -> Option<f32> {
+pub fn median(mut list: Vec<f32>) -> Option<f32> {
     if list.is_empty() {
         return None;
     }
@@ -8,10 +8,6 @@ fn median(mut list: Vec<f32>) -> Option<f32> {
         0 => Some((list[list.len() / 2] + list[(list.len() / 2) - 1]) / 2.0),
         _ => Some(list[list.len() / 2]),
     }
-}
-
-fn main() {
-    println!("Hello, world!");
 }
 
 #[cfg(test)]
