@@ -6,7 +6,9 @@
 //
 // Retain order:
 // Return elements in their original order.
-pub fn unique(list: Vec<i32>) -> Vec<i32> {
+pub fn unique<T: Ord>(mut list: Vec<T>) -> Vec<T> {
+    list.sort();
+    list.dedup();
     list
 }
 
